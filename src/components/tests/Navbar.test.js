@@ -9,6 +9,6 @@ test("Navbar should show 'FleetMED'", () => {
     <Navbar />
   )
 
-  expect(navbar.text()).toEqual('FleetMED')
+  expect(navbar.text()).toContain('FleetMED')
 
 })

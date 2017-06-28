@@ -2,12 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
-import Navbar from './components/Navbar'
+import App from './components/App'
 
 
 ReactDOM.render(
   <BrowserRouter>
-    <Navbar />
+    <App />
   </BrowserRouter>,
   document.getElementById('root')
 )
