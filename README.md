@@ -25,7 +25,7 @@ $ npm i
 Finally, run the test suite to verify that everything is working correctly:
 
 ```
-$ npm test
+$ npm run test
 ```
 
 If the test suite passes, you'll be ready to run the app in a local server:
