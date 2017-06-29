@@ -2,9 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchReviews } from '../../actions/reviewActions'
 
-// connect can be used to provide a specific piece of the store to a component
+// @connect connects a React component to the Redux store
+// connect returns a new connected component class for us to use with our Redux store
 @connect((store) => {
   return {
+    reviews: store.reviews.allReviews
   }
 })
 class Reviews extends React.Component {
@@ -18,14 +20,14 @@ class Reviews extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
+    console.log(this.props);
   }
 
   render() {
     return(
       <div>
         <ul>
-          <li>Our first review</li>
+          <li>{typeof(this.props.reviews)}</li>
         </ul>
       </div>
     )
