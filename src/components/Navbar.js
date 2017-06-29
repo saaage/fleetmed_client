@@ -7,6 +7,7 @@ class Navbar extends React.Component {
       <nav className="navbar">
         <h2>FleetMED</h2>
         <Link to="/profile">Profile Page</Link>
+        <Link to="/reviews">Reviews</Link>
       </nav>
     )
   }
