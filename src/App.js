@@ -1,8 +1,10 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
-import Navbar from './Navbar'
-import Profile from './Profile'
+import Navbar from './components/Navbar'
+import Profile from './components/Profile'
+
+require("!style-loader!css-loader!sass-loader!./sass/all.scss")
 
 class App extends React.Component {
   render () {
