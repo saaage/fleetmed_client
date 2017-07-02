@@ -5,7 +5,7 @@ class Navbar extends React.Component {
   render () {
     return (
       <nav className="navbar">
-        <h2>FleetMED</h2>
+        <Link to="/"><h2>FleetMED</h2></Link>
         <Link to="/profile">Profile Page</Link>
         <Link to="/reviews">Reviews</Link>
       </nav>

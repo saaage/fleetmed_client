@@ -23,10 +23,14 @@ class Reviews extends React.Component {
   }
 
   render() {
+
+    let { reviews } = this.props
+    let mappedReviews = reviews.map(review => <li key={review.created_at}>{review.feedback} {review.recommended ? 'Recommended' : ''}</li>)
+
     return(
       <div>
         <ul>
-          <li>{typeof(this.props.reviews)}</li>
+          { mappedReviews }
         </ul>
       </div>
     )
