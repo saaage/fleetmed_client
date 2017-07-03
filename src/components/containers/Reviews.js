@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchReviews } from '../../actions/reviewActions'
+import { fetchReviews, deleteReview, addReview } from '../../actions/reviewActions'
+
+import Review from '../presentational/review'
 
 // @connect connects a React component to the Redux store allowing us to map state to props
 // the module export will include the connected component
@@ -13,19 +15,28 @@ class Reviews extends React.Component {
 
   constructor(props) {
     super(props)
+
+    this.deleteReview = this.deleteReview.bind(this)
+    // binds deleteReview as a Class method rather than an instance method
   }
 
   componentWillMount() {
     this.props.dispatch(fetchReviews())
   }
 
-  componentDidMount() {
+  deleteReview(id) {
+    this.props.dispatch(deleteReview(id))
   }
 
   render() {
 
     let { reviews } = this.props
-    let mappedReviews = reviews.map(review => <li key={review.created_at}>{review.feedback} {review.recommended ? 'Recommended' : ''}</li>)
+
+    let mappedReviews = reviews.map( review =>
+      <Review key={review.id} {...review}
+        id={review.id}
+        delete={ () => this.deleteReview(review.id) } />
+    )
 
     return(
       <div>

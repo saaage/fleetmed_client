@@ -42,6 +42,7 @@ module.exports = {
   devServer: {
     hot: true, // Tell the dev-server we're using HMR
     contentBase: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/',
+    historyApiFallback: true
   }
 };
