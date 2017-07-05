@@ -1,8 +1,11 @@
+// Reviews is a container component with access to state
+// Reviews will have the following actions: all, show
+
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchReviews, deleteReview, addReview } from '../../actions/reviewActions'
+import { fetchReviews, deleteReview, addReview } from '../../redux/actions/reviewActions'
 
-import Review from '../presentational/review'
+import Review from './Review'
 
 // @connect connects a React component to the Redux store allowing us to map state to props
 // the module export will include the connected component
