@@ -8,6 +8,7 @@ import Comps from './components'
 const Routes = () =>
 
   <div>
+    <Route path="/signin" component={Comps.Sessions.New}/>
     <Route path="/profile" component={Comps.Profile}/>
     <Route path="/reviews" component={Comps.Reviews}/>
   </div>

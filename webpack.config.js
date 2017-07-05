@@ -17,13 +17,11 @@ module.exports = {
 
   module: {
     rules: [
-
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        use: 'babel-loader'
       },
-
       {
         test: /\.css$/,
         use: [
@@ -32,7 +30,6 @@ module.exports = {
           'postcss-loader'
         ]
       },
-
       {
         test: /\.scss$/,
         loaders: ["style-loader", "css-loader", "sass-loader"]
