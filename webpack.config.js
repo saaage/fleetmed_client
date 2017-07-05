@@ -5,7 +5,9 @@ module.exports = {
   entry: './src/index.js',
 
   plugins: [
+
     new webpack.HotModuleReplacementPlugin() // Enable HMR
+
   ],
 
   output: {

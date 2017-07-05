@@ -6,7 +6,7 @@ export default function reducer(state = initialState, action) {
 
   switch(action.type) {
     case "FETCH_REVIEWS_FULFILLED":
-      return {...state, allReviews: action.payload}
+      return {...state, allReviews: action.payload.data}
     case "DELETE_REVIEW_FULFILLED":
       return {...state, allReviews: state.allReviews.filter( review => review.id !== action.payload )}
     default:
