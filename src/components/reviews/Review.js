@@ -1,17 +1,21 @@
 import React from 'react'
+import styled from 'styled-components'
+// styled-components allows us to add named styles to html tags as well as personal and 3rd party components
 
 const Review = (props) => {
 
-  let id = props.id
-  let feedback = props.feedback
-
   return (
-    <li>
-      {id + ':   ' + feedback}
+    <li className={props.className}>
+      {props.id + ':   ' + props.feedback}
       <button onClick={props.delete}>Delete</button>
     </li>
   )
 
 }
 
-export default Review
+const styledReview = styled(Review)`
+  color: pink;
+  font-family: 'Open Sans'
+`
+
+export default styledReview

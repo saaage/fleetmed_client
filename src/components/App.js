@@ -3,19 +3,17 @@
 
 import React from 'react'
 import { Route } from 'react-router-dom'
-
-import Navbar from './structural/Navbar'
+import NavContainer from './navbar/NavContainer'
 
 import Routes from '../Routes'
 
-require("!style-loader!css-loader!sass-loader!../sass/all.scss")
-
 class App extends React.Component {
-  render () {
+
+  render() {
     return (
       <div>
-        <Navbar />
-        <Routes/>
+        <NavContainer />
+        <Routes />
       </div>
     )
   }

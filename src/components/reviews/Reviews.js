@@ -41,12 +41,15 @@ class Reviews extends React.Component {
         delete={ () => this.deleteReview(review.id) } />
     )
 
+    let ulStyle = {
+      margin: "0px",
+      listStyleType: 'none'
+    }
+
     return(
-      <div>
-        <ul>
+        <ul style={ulStyle}>
           { mappedReviews }
         </ul>
-      </div>
     )
 
   }
