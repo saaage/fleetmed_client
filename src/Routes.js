@@ -2,15 +2,24 @@
 
 import React from 'react'
 import { Route } from 'react-router-dom'
+import styled from 'styled-components'
 
 import Comps from './components'
 
-const Routes = () =>
+const Routes = (props) =>
 
-  <div>
+  <div className={props.className}>
     <Route path="/signin" component={Comps.Sessions.New}/>
     <Route path="/profile" component={Comps.Profile}/>
     <Route path="/reviews" component={Comps.Reviews}/>
   </div>
 
-export default Routes
+const styledRoutes = styled(Routes)`
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  height: 100%;
+`
+
+export default styledRoutes
