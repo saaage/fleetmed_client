@@ -1,11 +1,12 @@
+import axios from 'axios'
 
-export function userSignIn() {
+export function userSignIn(email, password) {
   return function(dispatch) {
     dispatch({type: 'USER_SIGN_IN_FULFILLED',
       payload: {
-        id: 1,
         name: 'Stefan Age',
-        email: 'me@stefanage.com'
+        email: email,
+        password: password
       }
     })
   }
