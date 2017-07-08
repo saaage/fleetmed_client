@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Navbar from '../Navbar'
+import Navbar from '../navbar/Navbar'
 
 
 test("Navbar should show 'FleetMED'", () => {
@@ -9,6 +9,6 @@ test("Navbar should show 'FleetMED'", () => {
     <Navbar />
   )
 
-  expect(navbar.text()).toContain('FleetMED')
+  expect(navbar.contains('FleetMED'))
 
 })

@@ -3,6 +3,7 @@
 import Reviews from './reviews/Reviews'
 import Profile from './profile/Profile'
 import Sessions from './sessions'
+import App from './App'
 
 export default {
   Reviews, Profile, Sessions

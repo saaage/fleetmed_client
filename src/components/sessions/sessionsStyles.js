@@ -1,13 +1,21 @@
 import styled from 'styled-components'
 
+
+export const SignInContainer = styled.div`
+	align-items: center;
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	height: 100%;
+`
 export const Form = styled.div`
+
 	align-content: center;
 	border: 1px solid;
 	border-radius: 3px;
 	display: flex;
 	height: 20em;
 	justify-content: center;
-	margin-top: -5rem;
 	width: 30em;
 
 	form {
@@ -24,7 +32,6 @@ export const Form = styled.div`
 `
 
 export const Button = styled.button`
-	/* Adapt the colours based on primary prop */
 	background: ${props => props.primary ? 'palevioletred' : 'white'};
 	color: ${props => props.primary ? 'white' : 'palevioletred'};
 

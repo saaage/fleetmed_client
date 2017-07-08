@@ -10,8 +10,8 @@ const Routes = (props) =>
 
   <div className={props.className}>
     <Route path="/signin" component={Comps.Sessions.New}/>
-    <Route path="/profile" component={Comps.Profile}/>
     <Route path="/reviews" component={Comps.Reviews}/>
+    <Route path="/profile" component={Comps.Profile}/>
   </div>
 
 const styledRoutes = styled(Routes)`

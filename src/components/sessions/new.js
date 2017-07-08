@@ -7,7 +7,8 @@ import { userSignIn } from '../../redux/actions/userActions'
 
 
 @connect((store) => {
-	return {}
+	return {
+	}
 })
 class New extends React.Component {
 
@@ -25,13 +26,13 @@ class New extends React.Component {
 
 	render() {
 		return (
-				<Form>
-					<form>
-				    <input ref={node => {this.email = node} } type="email" placeholder="email"></input>
-				    <input ref={node => {this.password = node}} type="password" placeholder="password"></input>
-				    <Button primary onClick={this.signIn}>Sign In</Button>
-			  	</form>
-				</Form>
+					<Form>
+						<form>
+					    <input ref={node => {this.email = node} } type="email" placeholder="email"></input>
+					    <input ref={node => {this.password = node}} type="password" placeholder="password"></input>
+					    <Button primary onClick={this.signIn}>Sign In</Button>
+				  	</form>
+					</Form>
 		)
 	}
 }

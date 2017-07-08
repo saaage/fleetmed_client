@@ -1,4 +1,4 @@
-// navbar should render differently based on the value of role(prop)
+// navbar will render differently based on the value of role(prop)
 
 import React from 'react'
 import styled from 'styled-components'

@@ -2,9 +2,9 @@
 
 import React from 'react'
 import { Route } from 'react-router-dom'
-import NavContainer from './navbar/NavContainer'
 
 import Routes from '../Routes'
+import NavContainer from './navbar/NavContainer'
 import globalStyles from './styled/global'
 
 class App extends React.Component {
@@ -16,6 +16,7 @@ class App extends React.Component {
         <NavContainer />
         <Routes />
       </div>
+
     )
   }
 }

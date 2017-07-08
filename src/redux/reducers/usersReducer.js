@@ -1,5 +1,9 @@
 let initialState = {
-  user: {},
+  user: {
+    authentication_token: null,
+    email: null
+  },
+  loggedIn: false,
   fetching: false,
   fetched: false,
   error: null
@@ -11,7 +15,7 @@ export default function reducer(state = initialState, action){
     case "USER_SIGN_IN":
       return {...state, fetching: true}
     case "USER_SIGN_IN_FULFILLED":
-      return {...state, user: action.payload, fetching: false, fetched: true}
+      return {...state, user: action.payload, loggedIn: true, fetching: false, fetched: true}
     case "USER_SIGN_IN_FAILED":
       return {...state, error: action.payload, fetching: false, fetched: false}
     default:
