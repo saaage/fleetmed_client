@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 
-import { Form, Button } from './signInForm'
+import { Form, Button } from './sessionsStyles'
 import { userSignIn } from '../../redux/actions/userActions'
 
 
