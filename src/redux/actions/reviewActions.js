@@ -5,6 +5,7 @@ let reviews_path = 'http://localhost:3000/v1/reviews/'
 export function fetchReviews() {
 
   return function(dispatch) {
+    dispatch({type: 'FETCH_REVIEWS'})
     axios.get(reviews_path)
       .then((response) => {
         dispatch({type: 'FETCH_REVIEWS_FULFILLED', payload: response.data})
@@ -19,6 +20,7 @@ export function fetchReviews() {
 export function deleteReview(id) {
 
   return function(dispatch) {
+    dispatch({type: 'DELETE_REVIEW'})
     axios.delete(reviews_path + id)
       .then((response) => {
         dispatch({type: 'DELETE_REVIEW_FULFILLED', payload: id})
@@ -29,14 +31,3 @@ export function deleteReview(id) {
   }
 
 }
-
-// export function addReview() {
-//   return {
-//     type: 'ADD_REVIEW_FULFILLED',
-//     payload: {
-//       feedback: 'My local review. Wont be added to the database.',
-//       recommended: false,
-//       id: 101010
-//     }
-//   }
-// }

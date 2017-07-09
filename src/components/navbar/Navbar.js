@@ -2,15 +2,15 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import StyledLink from '../styled/StyledLink'
+import StyledNavLink from './StyledNavLink'
 
 const Navbar = (props) =>
 
   <nav className={props.className}>
       <ul>
-        <li><StyledLink to="/profile">Profile Page</StyledLink></li>
-        <li><StyledLink to="/">FleetMED</StyledLink></li>
-        <li><StyledLink to="/reviews">Reviews</StyledLink></li>
+        <li><StyledNavLink to="/profile">Profile Page</StyledNavLink></li>
+        <li><StyledNavLink exact to="/">FleetMED</StyledNavLink></li>
+        <li><StyledNavLink to="/reviews">Reviews</StyledNavLink></li>
       </ul>
   </nav>
 

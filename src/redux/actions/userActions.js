@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { Redirect } from 'react-router-dom'
 
 let sessions_path = 'http://localhost:3000/v1/sessions'
 
@@ -21,4 +20,12 @@ export function userSignIn(email, password) {
         dispatch({type: 'USER_SIGN_IN_FAILED', payload: err})
       })
   }
+}
+
+export function changeUserState() {
+
+  return function(dispatch) {
+    dispatch({type: 'TOGGLE_USER_STATE'})
+  }
+
 }
