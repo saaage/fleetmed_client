@@ -5,8 +5,6 @@ import Routes from '../../Routes'
 
 const SignedIn = () =>
 
-  <div>
     <NavContainer />
-  </div>
 
 export default SignedIn

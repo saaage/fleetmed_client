@@ -10,7 +10,6 @@ export const SignInContainer = styled.div`
 `
 export const Form = styled.div`
 
-	align-content: center;
 	border: 1px solid;
 	border-radius: 3px;
 	display: flex;

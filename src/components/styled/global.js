@@ -14,10 +14,16 @@ const global = injectGlobal`
 
   #root{
     flex: 1;
+    display: flex;
   }
 
   #root [data-reactroot] {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
   }
 `
 

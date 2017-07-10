@@ -17,6 +17,7 @@ const Navbar = (props) =>
 
 const styledNavbar = styled(Navbar)`
 
+  width: 100%;
   background-color: #333;
   display: flex;
   justify-content: center;
