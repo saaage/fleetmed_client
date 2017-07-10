@@ -7,36 +7,19 @@ import React from 'react'
 import { connect } from 'react-redux'
 import NewSession from '../sessions/New'
 import SignedIn from './SignedIn'
+import { withRouter, Redirect } from 'react-router-dom'
+import store from '../../redux/store'
 
-import { changeUserState } from '../../redux/actions/userActions.js'
-
-
-@connect((store) => {
-  return { signedIn: store.users.user.signedIn }
-})
 class Layout extends React.Component {
 
-  componentWillMount() {
-    if (this.tokenPresent()){
-      this.props.dispatch(changeUserState())
-    } else {
-      console.log('no token')
-    }
-  }
-
-  tokenPresent() {
-    const token = localStorage.getItem('token')
-    if (token == undefined){
-      return false
-    } else
-      return token.null ? false : true
-  }
-
   render() {
-      if (this.props.SignedIn) {
+
+      if (this.props.token) {
         return <SignedIn />
+      } else {
+        return null
       }
-      return <NewSession />
+
   }
 }
 

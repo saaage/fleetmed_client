@@ -8,7 +8,9 @@ import { connect } from 'react-redux'
 
 import { Form, Button } from './sessionsStyles'
 import { userSignIn, changeUserState } from '../../redux/actions/userActions'
+import { withRouter } from 'react-router-dom'
 
+@withRouter
 @connect((store) => {
 	return {
 		signedIn: store.users.user.signedIn
@@ -19,13 +21,19 @@ class New extends React.Component {
 	constructor(props) {
 		super(props)
 		this.signIn = this.signIn.bind(this)
+		this.successCallBack = this.successCallBack.bind(this)
 	}
 
 	signIn(e) {
 		e.preventDefault()
 		let email = this.email.value
 		let password = this.password.value
-		this.props.dispatch(userSignIn(email, password))
+		let successCallBack = this.successCallBack
+		this.props.dispatch(userSignIn(email, password, successCallBack))
+	}
+
+	successCallBack() {
+		this.props.history.push('/profile')
 	}
 
 	render() {

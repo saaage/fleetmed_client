@@ -1,28 +1,30 @@
 // Routes holds our route tree and will be rendered by App.js
 
 import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import { Route, Redirect, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Comps from './components'
 
-// If props.token is false, then render Sign In page
-
 const Routes = (props) => {
 
-  if (props.token)
+  // If a user is signed in, provide routes for our application
+  if (props.signedIn) {
     return (
       <div className={props.className}>
         <Route path="/reviews" component={Comps.Reviews}/>
         <Route path="/profile" component={Comps.Profile}/>
       </div>
     )
-    return (
-      <div className={props.className}>
-        <Route path="/signin" component={Comps.Sessions.New}/>
-        <Redirect to='/signin'/>
-      </div>
-    )
+  } else {
+    // If not signed in provide signIn route and redirect
+      return (
+        <Switch>
+          <Route path='/signin' component={Comps.Sessions.New}/>
+          <Redirect from='/' to='/signin'/>
+        </Switch>
+      )
+  }
 }
 
 const styledRoutes = styled(Routes)`
