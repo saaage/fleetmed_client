@@ -1,5 +1,6 @@
 import New from './New'
+import Destroy from './Destroy'
 
 export default {
-  New
+  New, Destroy
 }

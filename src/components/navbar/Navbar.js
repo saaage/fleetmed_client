@@ -11,6 +11,7 @@ const Navbar = (props) =>
         <li><StyledNavLink to="/profile">Profile Page</StyledNavLink></li>
         <li><StyledNavLink exact to="/">FleetMED</StyledNavLink></li>
         <li><StyledNavLink to="/reviews">Reviews</StyledNavLink></li>
+        <li><StyledNavLink to="/signout">Sign Out</StyledNavLink></li>
       </ul>
   </nav>
 

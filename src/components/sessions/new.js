@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import { connect } from 'react-redux'
 
 import { Form, Button } from './sessionsStyles'
-import { userSignIn, changeUserState } from '../../redux/actions/userActions'
+import { userSignIn } from '../../redux/actions/userActions'
 import { withRouter } from 'react-router-dom'
 
 @withRouter

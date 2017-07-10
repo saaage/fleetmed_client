@@ -23,3 +23,24 @@ export function userSignIn(email, password, successCallBack) {
       })
   }
 }
+
+export function userSignOut(email, token) {
+
+  return function(dispatch) {
+    dispatch({type: 'USER_SIGN_OUT'})
+    localStorage.clear()
+    axios.delete(sessions_path, {
+      headers: {
+        'X-User-Email': email,
+        'X-User-Token': token
+      }
+    })
+      .then((response) => {
+        dispatch({type: 'USER_SIGN_OUT_FULFILLED', payload: response.status})
+      })
+      .catch((err) => {
+        dispatch({type: 'USER_SIGN_OUT_FAILED', payload: err})
+      })
+  }
+
+}

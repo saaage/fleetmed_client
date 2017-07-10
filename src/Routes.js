@@ -14,6 +14,7 @@ const Routes = (props) => {
       <div className={props.className}>
         <Route path="/reviews" component={Comps.Reviews}/>
         <Route path="/profile" component={Comps.Profile}/>
+        <Route path="/signout" component={Comps.Sessions.Destroy} />
       </div>
     )
   } else {
