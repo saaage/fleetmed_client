@@ -18,6 +18,8 @@ export default function reducer(state = initialState, action){
       return {...state, user: {...action.payload, signedIn: true}, fetching: false, fetched: true}
     case "USER_SIGN_IN_FAILED":
       return {...state, error: action.payload, fetching: false, fetched: false}
+    case "USER_SIGN_OUT_FULFILLED":
+      return {...state, user: {authentication_token: null, email: null, signedIn: false}}
     default:
       return state
   }
