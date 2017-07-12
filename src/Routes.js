@@ -17,7 +17,7 @@ const Routes = (props) => {
         <Route path="/signout" component={Comps.Sessions.Destroy} />
       </div>
     )
-  } else {
+  } else if (props.signedIn == false) {
     // If not signed in provide signIn route and redirect
       return (
         <Switch>
@@ -25,6 +25,8 @@ const Routes = (props) => {
           <Redirect from='/' to='/signin'/>
         </Switch>
       )
+  } else {
+      return null
   }
 }
 

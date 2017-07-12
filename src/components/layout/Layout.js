@@ -14,7 +14,7 @@ class Layout extends React.Component {
 
   render() {
 
-      if (this.props.token) {
+      if (this.props.signedIn) {
         return <SignedIn />
       } else {
         return null

@@ -9,7 +9,7 @@ const Navbar = (props) =>
   <nav className={props.className}>
       <ul>
         <li><StyledNavLink to="/profile">Profile Page</StyledNavLink></li>
-        <li><StyledNavLink exact to="/">FleetMED</StyledNavLink></li>
+        <li><StyledNavLink exact to="/home">FleetMED</StyledNavLink></li>
         <li><StyledNavLink to="/reviews">Reviews</StyledNavLink></li>
         <li><StyledNavLink to="/signout">Sign Out</StyledNavLink></li>
       </ul>

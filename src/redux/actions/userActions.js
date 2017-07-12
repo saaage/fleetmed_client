@@ -44,3 +44,23 @@ export function userSignOut(email, token) {
   }
 
 }
+
+export function checkAPISession() {
+
+  return function(dispatch) {
+    dispatch({type: 'VALIDATING_SESSION'})
+    axios.get(sessions_path, {
+      headers: {
+        'X-User-Email': localStorage.getItem('email'),
+        'X-User-Token': localStorage.getItem('token')
+      }
+    })
+      .then((response) => {
+        dispatch({type: 'VALIDATING_SESSION_FULFILLED', payload: response.status})
+      })
+      .catch((err) => {
+        dispatch({type: 'VALIDATING_SESSION_FAILED', payload: err })
+      })
+  }
+
+}

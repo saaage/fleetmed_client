@@ -5,10 +5,13 @@ import { withRouter } from 'react-router-dom'
 import globalStyles from './styled/global'
 import Layout from './layout/Layout'
 import Routes from '../Routes'
+import { checkAPISession } from '../redux/actions/userActions'
 
 @withRouter
 @connect((store) => {
-  return {}
+  return {
+    user: store.users.user
+  }
 })
 class App extends React.Component {
 
@@ -16,22 +19,19 @@ class App extends React.Component {
     super(props)
   }
 
-  tokenPresent() {
-    const token = localStorage.getItem('token')
-    if (token == undefined){
-      return false
-    } else
-      return token.null ? false : true
+  componentWillMount() {
+    this.props.dispatch(checkAPISession())
   }
 
   render() {
-    let token = this.tokenPresent()
+
+    let { signedIn } = this.props.user
 
     return (
       <div>
         <globalStyles />
-        <Layout token={token}/>
-        <Routes signedIn={token}/>
+        <Layout signedIn={signedIn} />
+        <Routes signedIn={signedIn}/>
       </div>
     )
   }

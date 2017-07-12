@@ -1,4 +1,4 @@
-import { applyMiddleware, createStore } from 'redux'
+import { applyMiddleware, createStore, compose } from 'redux'
 
 import { logger } from 'redux-logger'
 // logs changes to state in the console
@@ -12,4 +12,6 @@ import reducer from './reducers'
 const middleware = applyMiddleware(promise(), thunk, logger)
 // combines our middleware into one object
 
-export default createStore(reducer, middleware)
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+export default createStore(reducer, composeEnhancers(middleware))
