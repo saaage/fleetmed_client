@@ -6,7 +6,12 @@ export function fetchReviews() {
 
   return function(dispatch) {
     dispatch({type: 'FETCH_REVIEWS'})
-    axios.get(reviews_path)
+    axios.get(reviews_path, {
+      headers: {
+        'X-User-Email': localStorage.getItem('email'),
+        'X-User-Token': localStorage.getItem('token')
+      }
+    })
       .then((response) => {
         dispatch({type: 'FETCH_REVIEWS_FULFILLED', payload: response.data})
       })
@@ -21,7 +26,12 @@ export function deleteReview(id) {
 
   return function(dispatch) {
     dispatch({type: 'DELETE_REVIEW'})
-    axios.delete(reviews_path + id)
+    axios.delete(reviews_path + id, {
+      headers: {
+        'X-User-Email': localStorage.getItem('email'),
+        'X-User-Token': localStorage.getItem('token')
+      }
+    })
       .then((response) => {
         dispatch({type: 'DELETE_REVIEW_FULFILLED', payload: id})
       })
