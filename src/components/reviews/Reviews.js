@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { fetchReviews, deleteReview, addReview } from '../../redux/actions/reviewActions'
 
 import Review from './Review'
+import Grid from '../svg/Grid'
 
 // @connect connects a React component to the Redux store allowing us to map state to props
 // the module export will include the connected component
@@ -45,6 +46,12 @@ class Reviews extends React.Component {
     let ulStyle = {
       margin: "0px",
       listStyleType: 'none'
+    }
+
+    if (fetching) {
+      return (
+        <Grid />
+      )
     }
 
     return(

@@ -33,9 +33,9 @@ const Routes = (props) => {
 const styledRoutes = styled(Routes)`
   align-items: center;
   display: flex;
-  flex: 1;
   justify-content: center;
-  height: 100%;
+  flex: 1;
+  width: 100%;
 `
 
 export default styledRoutes
