@@ -1,4 +1,5 @@
 // Connected component that does not render a view, but destroys session and redirects to '/'
+
 import React from 'react'
 import { userSignOut } from '../../redux/actions/userActions'
 import { Redirect } from 'react-router-dom'
@@ -16,9 +17,7 @@ class Logout extends React.Component {
   }
 
   destroySession(){
-    let email = localStorage.getItem('email')
-    let token = localStorage.getItem('token')
-    this.props.dispatch(userSignOut(email, token))
+    this.props.dispatch(userSignOut())
   }
 
   render() {

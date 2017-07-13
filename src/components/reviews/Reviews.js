@@ -11,7 +11,8 @@ import Review from './Review'
 // the module export will include the connected component
 @connect((store) => {
   return {
-    reviews: store.reviews.allReviews
+    reviews: store.reviews.allReviews,
+    fetching: store.reviews.fetching
   }
 })
 class Reviews extends React.Component {
@@ -23,7 +24,7 @@ class Reviews extends React.Component {
     // binds deleteReview as a Class method rather than an instance method
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.dispatch(fetchReviews())
   }
 
@@ -33,7 +34,7 @@ class Reviews extends React.Component {
 
   render() {
 
-    let { reviews } = this.props
+    let { reviews, fetching } = this.props
 
     let mappedReviews = reviews.map( review =>
       <Review key={review.id} {...review}

@@ -1,6 +1,5 @@
 // Sessions.New is connected to our store
-// It will have the ability to dispatch action changeUserState
-// When userSignIn is successful we want to dispatch changeUserState
+// It will have the ability to dispatch action userSignIn
 
 import React from 'react'
 import styled from 'styled-components'
@@ -8,14 +7,8 @@ import { connect } from 'react-redux'
 
 import { Form, Button } from './sessionsStyles'
 import { userSignIn } from '../../redux/actions/userActions'
-import { withRouter } from 'react-router-dom'
 
-@withRouter
-@connect((store) => {
-	return {
-		signedIn: store.users.user.signedIn
-	}
-})
+@connect((store) => { return {} })
 class New extends React.Component {
 
 	constructor(props) {

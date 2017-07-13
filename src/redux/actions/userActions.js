@@ -24,11 +24,12 @@ export function userSignIn(email, password, successCallBack) {
   }
 }
 
-export function userSignOut(email, token) {
+export function userSignOut() {
 
   return function(dispatch) {
     dispatch({type: 'USER_SIGN_OUT'})
-    localStorage.clear()
+    let email = localStorage.getItem('email')
+    let token = localStorage.getItem('token')
     axios.delete(sessions_path, {
       headers: {
         'X-User-Email': email,
@@ -37,6 +38,7 @@ export function userSignOut(email, token) {
     })
       .then((response) => {
         dispatch({type: 'USER_SIGN_OUT_FULFILLED', payload: response.status})
+        localStorage.clear()
       })
       .catch((err) => {
         dispatch({type: 'USER_SIGN_OUT_FAILED', payload: err})
@@ -46,6 +48,7 @@ export function userSignOut(email, token) {
 }
 
 export function checkAPISession() {
+// this action is called during initial App load as well as refresh
 
   return function(dispatch) {
     dispatch({type: 'VALIDATING_SESSION'})
