@@ -4,23 +4,18 @@
 // user.SignedIn is only utilized to trigger Sessions.New component
 
 import React from 'react'
-import { connect } from 'react-redux'
-import NewSession from '../sessions/New'
 import SignedIn from './SignedIn'
-import { withRouter, Redirect } from 'react-router-dom'
-import store from '../../redux/store'
 
-class Layout extends React.Component {
+const Layout = () => {
 
-  render() {
-
-      if (this.props.signedIn) {
+  return (
+      if(this.props.signedIn) {
         return <SignedIn />
       } else {
-        return null
-      }
+          return null
+        }
+  )
 
-  }
 }
 
 export default Layout

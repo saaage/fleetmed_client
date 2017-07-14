@@ -4,19 +4,20 @@ import React from 'react'
 import styled from 'styled-components'
 import StyledNavLink from './StyledNavLink'
 
-const Navbar = (props) =>
+const Navbar = props => (
 
   <nav className={props.className}>
-      <ul>
-        <li><StyledNavLink to="/profile">Profile Page</StyledNavLink></li>
-        <li><StyledNavLink exact to="/home">FleetMED</StyledNavLink></li>
-        <li><StyledNavLink to="/reviews">Reviews</StyledNavLink></li>
-        <li><StyledNavLink to="/signout">Sign Out</StyledNavLink></li>
-      </ul>
+    <ul>
+      <li><StyledNavLink to="/profile">Profile Page</StyledNavLink></li>
+      <li><StyledNavLink exact to="/home">FleetMED</StyledNavLink></li>
+      <li><StyledNavLink to="/reviews">Reviews</StyledNavLink></li>
+      <li><StyledNavLink to="/signout">Sign Out</StyledNavLink></li>
+    </ul>
   </nav>
 
-const styledNavbar = styled(Navbar)`
+)
 
+const styledNavbar = styled(Navbar)`
   width: 100%;
   background-color: #333;
   display: flex;
