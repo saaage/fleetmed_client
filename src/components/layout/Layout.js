@@ -7,10 +7,8 @@
 import React from 'react'
 import SignedIn from './SignedIn'
 
-const Layout = () => (
-
-  this.props.signedIn ? <SignedIn /> : null
-
+const Layout = props => (
+  props.signedIn ? <SignedIn /> : null
 )
 
 export default Layout
