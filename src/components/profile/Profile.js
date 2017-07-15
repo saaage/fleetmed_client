@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Profile extends React.Component {
-  render() 
+  render() {
     return (
       <h1>Welcome to your profile page</h1>
     )
