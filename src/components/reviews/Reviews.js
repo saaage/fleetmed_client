@@ -1,28 +1,28 @@
 // Reviews is a container component with access to state
 // Reviews will have the following actions: all, show
-
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchReviews, deleteReview, addReview } from '../../redux/actions/reviewActions'
+import { fetchReviews, deleteReview } from '../../redux/actions/reviewActions'
 
 import Review from './Review'
 import Grid from '../svg/Grid'
 
-// @connect connects a React component to the Redux store allowing us to map state to props
-// the module export will include the connected component
-@connect((store) => {
-  return {
+// @connect connects a React component to the Redux store allowing us to
+//   map pieces state to component props. The export will include
+//   the connected component
+@connect(store => (
+  {
     reviews: store.reviews.allReviews,
     fetching: store.reviews.fetching
   }
-})
+))
 class Reviews extends React.Component {
 
   constructor(props) {
     super(props)
 
-    this.deleteReview = this.deleteReview.bind(this)
     // binds deleteReview as a Class method rather than an instance method
+    this.deleteReview = this.deleteReview.bind(this)
   }
 
   componentDidMount() {
@@ -34,17 +34,20 @@ class Reviews extends React.Component {
   }
 
   render() {
+    const { reviews, fetching } = this.props
 
-    let { reviews, fetching } = this.props
-
-    let mappedReviews = reviews.map( review =>
-      <Review key={review.id} {...review}
+    const mappedReviews = reviews.map(review => (
+      <Review
+        key={review.id}
+        {...review}
         id={review.id}
-        delete={ () => this.deleteReview(review.id) } />
+        delete={() => this.deleteReview(review.id)}
+      />
+      )
     )
 
-    let ulStyle = {
-      margin: "0px",
+    const ulStyle = {
+      margin: '0px',
       listStyleType: 'none'
     }
 
@@ -54,12 +57,11 @@ class Reviews extends React.Component {
       )
     }
 
-    return(
-        <ul style={ulStyle}>
-          { mappedReviews }
-        </ul>
+    return (
+      <ul style={ulStyle}>
+        { mappedReviews }
+      </ul>
     )
-
   }
 }
 

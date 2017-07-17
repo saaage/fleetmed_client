@@ -1,10 +1,10 @@
-// this file is an index of components to be exported in bulk for Routes.js
-
+// Components index for use in Routes.js
 import Reviews from './reviews/Reviews'
 import Profile from './profile/Profile'
 import Sessions from './sessions'
-import App from './App'
 
 export default {
-  Reviews, Profile, Sessions
+  Reviews,
+  Profile,
+  Sessions
 }

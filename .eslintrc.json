@@ -5,6 +5,7 @@
     },
     "extends": "eslint:recommended",
     "extends": "airbnb",
+    "parser": "babel-eslint",
     "parserOptions": {
         "sourceType": "module"
     },
@@ -20,6 +21,7 @@
             "error",
             "unix"
         ],
+        "react/prop-types": [2, {"skipUndeclared": true}],
         "quotes": [
             "error",
             "single"
@@ -27,6 +29,7 @@
         "semi": [
             "error",
             "never"
-        ]
+        ],
+        "strict": 0
     }
 }

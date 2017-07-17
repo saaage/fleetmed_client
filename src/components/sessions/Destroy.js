@@ -1,29 +1,18 @@
-// Connected component that does not render a view, but destroys session and redirects to '/'
+// Destroy does not render a view, just destroys session and redirects to '/'
 
 import React from 'react'
-import { userSignOut } from '../../redux/actions/userActions'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-@connect((store)=>{return{}})
+import { userSignOut } from '../../redux/actions/userActions'
+
+@connect(() => {})
 class Logout extends React.Component {
+  componentWillMount = () => this.destroySession()
 
-  constructor(props){
-    super(props)
-  }
+  destroySession = () => this.props.dispatch(userSignOut())
 
-  componentWillMount(){
-    this.destroySession()
-  }
-
-  destroySession(){
-    this.props.dispatch(userSignOut())
-  }
-
-  render() {
-    return <Redirect to="/" />
-  }
-
+  render = () => <Redirect to="/" />
 }
 
 export default Logout
