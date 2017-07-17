@@ -2,28 +2,17 @@ import { injectGlobal } from 'styled-components'
 
 const global = injectGlobal`
 
-  html {
-    height: 100%;
-  }
-
   body {
-    display: flex;
     margin: 0px;
-    min-height: 100%;
+    margin-top: 1px;
   }
 
-  #root{
-    flex: 1;
-    display: flex;
-  }
-
+${''/* Any items rendered inside of App will be in centered along X and Y */}
   #root [data-reactroot] {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
     align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
   }
 `
 

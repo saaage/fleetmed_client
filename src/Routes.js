@@ -7,7 +7,6 @@ import styled from 'styled-components'
 import Comps from './components'
 
 const Routes = (props) => {
-
   // If a user is signed in, provide routes for our application
   if (props.signedIn) {
     return (
