@@ -1,7 +1,6 @@
 // Allows user to initiate a new session
 import React from 'react'
 import { connect } from 'react-redux'
-
 import { userSignIn } from 'redux/actions/userActions'
 import StaticLot from 'core/styled/StaticLot'
 import StyledLink from 'core/styled/StyledLink'
