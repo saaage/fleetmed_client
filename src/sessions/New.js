@@ -2,12 +2,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { Form, Button } from './sessionsStyledComponents'
-import { userSignIn } from '../../redux/actions/userActions'
-import StaticLot from '../styled/StaticLot'
-import StyledLink from '../styled/StyledLink'
+import { userSignIn } from 'redux/actions/userActions'
+import StaticLot from 'styled/StaticLot'
+import StyledLink from 'styled/StyledLink'
 
-@connect(() => {})
+import { Form, Button } from './sessionsStyledComponents'
+
+@connect(() => ({}))
 class New extends React.Component {
   constructor(props) {
     super(props)
@@ -37,7 +38,7 @@ class New extends React.Component {
             <Button primary onClick={this.signIn}>Sign In</Button>
           </form>
         </Form>
-        <StyledLink to="/signup">Sign Up</StyledLink>
+        <StyledLink to="/signup">Sign Up For FleetMED</StyledLink>
       </StaticLot>
     )
   }

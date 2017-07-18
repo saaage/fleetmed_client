@@ -1,14 +1,18 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/main.js',
 
   plugins: [
 
     new webpack.HotModuleReplacementPlugin() // Enable HMR
 
   ],
+
+  resolve: {
+    modules: ['node_modules', 'src']
+  },
 
   output: {
     filename: 'main.js',

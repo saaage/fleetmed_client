@@ -1,16 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
+// Components index for use in Routes.js
+import Reviews from 'reviews/Reviews'
+import Profile from 'profile/Profile'
+import Sessions from 'sessions'
+import Registration from 'registration'
 
-import store from './redux/store'
-import App from './components/App'
-
-ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>,
-  document.getElementById('root')
-)
+export default {
+  Reviews,
+  Profile,
+  Sessions,
+  Registration
+}

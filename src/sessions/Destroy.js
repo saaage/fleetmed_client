@@ -4,7 +4,7 @@ import React from 'react'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import { userSignOut } from '../../redux/actions/userActions'
+import { userSignOut } from 'redux/actions/userActions'
 
 @connect(() => {})
 class Logout extends React.Component {

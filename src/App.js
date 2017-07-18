@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
+import Routes from './routes'
 import globalStyles from './styled/global'
 import Layout from './layout/Layout'
-import Routes from '../Routes'
-import { checkAPISession } from '../redux/actions/userActions'
+import { checkAPISession } from './redux/actions/userActions'
 
 @withRouter
 @connect(store => (

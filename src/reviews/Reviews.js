@@ -2,7 +2,7 @@
 // Reviews will have the following actions: all, show
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchReviews, deleteReview } from '../../redux/actions/reviewActions'
+import { fetchReviews, deleteReview } from 'redux/actions/reviewActions'
 
 import Review from './Review'
 import Grid from '../svg/Grid'

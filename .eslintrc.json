@@ -31,5 +31,7 @@
             "never"
         ],
         "strict": 0
-    }
+    },
+    "settings": {"import/resolver": "webpack"}
+
 }
