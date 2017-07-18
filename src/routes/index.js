@@ -8,10 +8,13 @@ const Routes = (props) => {
   if (props.signedIn) {
     return (
       <div className={props.className}>
-        <Route path="/reviews" component={Comps.Reviews} />
-        <Route path="/profile" component={Comps.Profile} />
-        <Route path="/signout" component={Comps.Sessions.Destroy} />
-        <Redirect from="/signin" to="/profile" />
+        <Switch>
+          <Route path="/reviews" component={Comps.Reviews} />
+          <Route path="/profile" component={Comps.Profile} />
+          <Route path="/signout" component={Comps.Sessions.Destroy} />
+          <Route path="/users" component={Comps.Registration.ConfirmEmail} />
+          <Redirect exact from="/signup" to="/profile" />
+        </Switch>
       </div>
     )
   } else if (props.signedIn === false) {
