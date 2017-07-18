@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import { userSignOut } from 'redux/actions/userActions'
 
-@connect(() => {})
+@connect(() => ({}))
 class Logout extends React.Component {
   componentWillMount = () => this.destroySession()
 

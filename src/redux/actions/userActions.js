@@ -2,11 +2,11 @@ import axios from 'axios'
 
 const sessionsPath = 'http://localhost:3000/v1/sessions'
 
-export function userSignIn(email, password, successCallBack) {
+export function userSignIn(emailAddress, password, successCallBack) {
   return (dispatch) => {
     dispatch({ type: 'USER_SIGN_IN' })
     axios.post(sessionsPath, {
-      email,
+      email: emailAddress,
       password
     })
       .then((response) => {
