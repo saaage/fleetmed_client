@@ -6,6 +6,7 @@ import Span from 'core/styled/Span'
 import StaticLot from 'core/styled/StaticLot'
 import StyledLink from 'core/styled/StyledLink'
 import { submitRegistration } from 'redux/actions/registrationActions'
+import { checkAPISession } from 'redux/actions/userActions'
 
 @connect(() => ({}))
 class NewProvider extends React.Component {
@@ -25,7 +26,7 @@ class NewProvider extends React.Component {
   }
 
   successCallBack() {
-    this.props.history.push('/')
+    this.props.dispatch(checkAPISession())
   }
 
   render() {

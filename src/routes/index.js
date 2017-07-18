@@ -11,6 +11,7 @@ const Routes = (props) => {
         <Route path="/reviews" component={Comps.Reviews} />
         <Route path="/profile" component={Comps.Profile} />
         <Route path="/signout" component={Comps.Sessions.Destroy} />
+        <Redirect from="/signin" to="/profile" />
       </div>
     )
   } else if (props.signedIn === false) {
