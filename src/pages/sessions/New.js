@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import { userSignIn } from 'redux/actions/userActions'
 import StaticLot from 'core/styled/StaticLot'
 import StyledLink from 'core/styled/StyledLink'
-
-import { Form, Button } from './sessionsStyledComponents'
+import FormStyler from 'core/styled/FormStyler'
+import Button from 'core/styled/Button'
 
 @connect(() => ({}))
 class New extends React.Component {
@@ -31,13 +31,13 @@ class New extends React.Component {
   render() {
     return (
       <StaticLot>
-        <Form>
+        <FormStyler>
           <form>
-            <input ref={(node) => { this.email = node }} type="email" placeholder="email" />
-            <input ref={(node) => { this.password = node }} type="password" placeholder="password" />
+            <input ref={(node) => { this.email = node }} type="email" placeholder="Email" />
+            <input ref={(node) => { this.password = node }} type="password" placeholder="Password" />
             <Button primary onClick={this.signIn}>Sign In</Button>
           </form>
-        </Form>
+        </FormStyler>
         <StyledLink to="/signup">Sign Up For FleetMED</StyledLink>
       </StaticLot>
     )

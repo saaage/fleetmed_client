@@ -14,13 +14,14 @@ const FormStyler = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 65%;
   }
-  
+
   input {
     display: block;
-    margin-bottom: .5em;
     font-size: 100%;
+    margin-bottom: .5em;
+    width: 100%;
   }
 `
 export default FormStyler
