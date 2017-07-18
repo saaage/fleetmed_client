@@ -4,8 +4,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchReviews, deleteReview } from 'redux/actions/reviewActions'
 
+import Grid from 'core/svg/Grid'
 import Review from './Review'
-import Grid from '../svg/Grid'
+
 
 // @connect connects a React component to the Redux store allowing us to
 //   map pieces state to component props. The export will include

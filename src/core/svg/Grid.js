@@ -1,13 +1,13 @@
 import React from 'react'
-import grid from './grid.svg'
 import styled from 'styled-components'
 
-const Spinner = props =>
+import grid from './grid.svg'
 
+const Spinner = props => (
   <div className={props.className}>
-    <img src={grid} />
+    <img alt="animation while loading" src={grid} />
   </div>
-
+)
 const StyledSpinner = styled(Spinner)`
 
   background-color: rgba(248, 187, 208,0.2);

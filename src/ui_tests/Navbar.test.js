@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Navbar from '../navbar/Navbar'
+import Navbar from 'core/navbar/Navbar'
 
 
 test("Navbar should show 'FleetMED'", () => {

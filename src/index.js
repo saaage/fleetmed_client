@@ -1,8 +1,8 @@
 // Components index for use in Routes.js
-import Reviews from 'reviews/Reviews'
-import Profile from 'profile/Profile'
-import Sessions from 'sessions'
-import Registration from 'registration'
+import Reviews from 'resources/reviews/Reviews'
+import Profile from 'pages/profile/Profile'
+import Sessions from 'resources/sessions'
+import Registration from 'pages/registration'
 
 export default {
   Reviews,

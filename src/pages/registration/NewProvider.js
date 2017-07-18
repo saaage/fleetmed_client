@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import StaticLot from '../styled/StaticLot'
-import FormStyler from '../styled/FormStyler'
+import StaticLot from 'core/styled/StaticLot'
+import FormStyler from 'core/styled/FormStyler'
 
 @connect(() => ({}))
 class NewProvider extends React.Component {

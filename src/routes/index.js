@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Redirect, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 
-import Comps from 'index.js'
+import Comps from 'index'
 
 const Routes = (props) => {
   if (props.signedIn) {

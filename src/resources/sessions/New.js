@@ -3,8 +3,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { userSignIn } from 'redux/actions/userActions'
-import StaticLot from 'styled/StaticLot'
-import StyledLink from 'styled/StyledLink'
+import StaticLot from 'core/styled/StaticLot'
+import StyledLink from 'core/styled/StyledLink'
 
 import { Form, Button } from './sessionsStyledComponents'
 
