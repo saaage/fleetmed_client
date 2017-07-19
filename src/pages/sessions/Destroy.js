@@ -8,11 +8,17 @@ import { userSignOut } from 'redux/actions/userActions'
 
 @connect(() => ({}))
 class Logout extends React.Component {
-  componentWillMount = () => this.destroySession()
+  componentWillMount() {
+    this.destroySession()
+  }
 
-  destroySession = () => this.props.dispatch(userSignOut())
+  destroySession() {
+    this.props.dispatch(userSignOut())
+  }
 
-  render = () => <Redirect to="/" />
+  render() {
+    return <Redirect to="/" />
+  }
 }
 
 export default Logout

@@ -16,7 +16,7 @@ class ConfirmEmail extends React.Component {
     this.submitConfirmation()
   }
 
-  // Issue a post request to API with token in URL params
+  // Issue a post request to API with token from URL params
   submitConfirmation() {
     const confirmationToken = queryString.parse(this.props.location.search)
     this.props.dispatch(confirmEmail(confirmationToken))

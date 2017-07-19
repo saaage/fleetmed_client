@@ -1,14 +1,15 @@
 {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest": true
     },
-    "extends": "eslint:recommended",
-    "extends": "airbnb",
+    "extends": ["eslint:recommended", "airbnb", "plugin:jest/recommended"],
     "parser": "babel-eslint",
     "parserOptions": {
         "sourceType": "module"
     },
+    "plugins": ["jest"],
     "rules": {
         "comma-dangle": ["error", "never"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
@@ -18,6 +19,10 @@
             2,
             {"SwitchCase": 1}
         ],
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/valid-expect": "error",
         "linebreak-style": [
             "error",
             "unix"
