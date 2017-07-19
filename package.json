@@ -2,16 +2,8 @@
   "name": "fleetmed_client",
   "version": "1.0.0",
   "description": "",
-  "jest": {
-    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ]
-  },
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "dev": "webpack-dev-server"
   },
   "keywords": [],
@@ -21,7 +13,6 @@
     "axios": "^0.16.2",
     "babel": "^6.23.0",
     "babel-core": "^6.25.0",
-    "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -29,7 +20,6 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "enzyme": "^2.9.1",
     "file-loader": "^0.11.2",
     "image-webpack-loader": "^3.3.1",
     "npm": "^5.1.0",
@@ -50,16 +40,10 @@
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.2",
     "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "jest": "^20.0.4",
-    "jest-enzyme": "^3.5.3",
-    "react-addons-test-utils": "^15.0.0-rc.2",
-    "react-dom": "^15.6.1",
-    "react-test-renderer": "^15.6.1"
+    "react-dom": "^15.6.1"
   }
 }
