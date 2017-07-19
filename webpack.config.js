@@ -54,4 +54,4 @@ module.exports = {
     publicPath: '/',
     historyApiFallback: true
   }
-};
+}
