@@ -31,8 +31,7 @@ export function userSignOut() {
       headers: {
         'X-User-Email': email,
         'X-User-Token': token
-      }
-    })
+      } })
       .then((response) => {
         dispatch({ type: 'USER_SIGN_OUT_FULFILLED', payload: response.status })
         localStorage.clear()

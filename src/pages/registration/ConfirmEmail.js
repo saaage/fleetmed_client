@@ -1,24 +1,29 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { checkAPISession } from 'redux/actions/userActions'
+import { withRouter, Redirect } from 'react-router-dom'
+import { confirmEmail } from 'redux/actions/registrationActions'
+import queryString from 'query-string'
 
+@withRouter
 @connect(() => ({}))
 class ConfirmEmail extends React.Component {
+  constructor(props) {
+    super(props)
+    this.submitConfirmation = this.submitConfirmation.bind(this)
+  }
 
-  // First, validate session
-  // If validation fails, render sign in page
-  // componentDidMount() {
-  //   this.props.dispatch(checkAPISession())
-  // }
+  componentDidMount() {
+    this.submitConfirmation()
+  }
+
   // Issue a post request to API with token in URL params
   submitConfirmation() {
-    console.log(this.props.location.search)
+    const confirmationToken = queryString.parse(this.props.location.search)
+    this.props.dispatch(confirmEmail(confirmationToken))
   }
 
   render() {
-    return (
-      <button onClick={this.submitConfirmation}>Click me</button>
-    )
+    return <Redirect to="/profile" />
   }
 }
 
