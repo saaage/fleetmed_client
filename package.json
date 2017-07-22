@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "jest": {
-    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "moduleDirectories": ["node_modules", "src"]
   },
   "dependencies": {
     "axios": "^0.16.2",
