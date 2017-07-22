@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { userSignIn } from 'redux/actions/userActions'
-import StaticLot from 'flexbox/StaticLot'
+import Centered from 'flexbox/CenteredContainer'
 import StyledLink from 'core/styled/StyledLink'
 import FormStyler from 'core/styled/FormStyler'
 import Button from 'core/styled/Button'
@@ -29,7 +29,7 @@ class New extends React.Component {
 
   render() {
     return (
-      <StaticLot>
+      <Centered>
         <FormStyler>
           <form>
             <input ref={(node) => { this.email = node }} type="email" placeholder="Email" />
@@ -38,7 +38,7 @@ class New extends React.Component {
           </form>
         </FormStyler>
         <StyledLink to="/signup">Sign Up For FleetMED</StyledLink>
-      </StaticLot>
+      </Centered>
     )
   }
 }

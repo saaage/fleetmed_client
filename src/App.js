@@ -2,10 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
+import { checkAPISession } from 'redux/actions/userActions'
 import Routes from 'routes'
 import globalStyles from 'core/styled/global'
-import Layout from 'core/layout/Layout'
-import { checkAPISession } from './redux/actions/userActions'
+import Navbar from 'core/navbar/styled/Navbar'
+
 
 @withRouter
 @connect(store => (
@@ -24,7 +25,7 @@ class App extends React.Component {
     return (
       <div>
         <globalStyles />
-        <Layout signedIn={signedIn} />
+        <Navbar signedIn={signedIn} />
         <Routes signedIn={signedIn} />
       </div>
     )

@@ -7,7 +7,6 @@ const global = injectGlobal`
     margin-top: 1px;
   }
 
-${''/* Any items rendered inside of App will be in centered along X and Y */}
   #root [data-reactroot] {
     height: 100vh;
     display: flex;

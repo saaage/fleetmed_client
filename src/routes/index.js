@@ -7,7 +7,7 @@ import Comps from 'index'
 const Routes = (props) => {
   if (props.signedIn) {
     return (
-      <div className={props.className}>
+      <div>
         <Switch>
           <Route path="/reviews" component={Comps.Reviews} />
           <Route path="/profile" component={Comps.Profile} />
