@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const Review = props => (
@@ -19,10 +18,5 @@ Review.propTypes = {
 Review.defaultProps = {
   className: null
 }
-
-const styledReview = styled(Review)`
-  color: pink;
-  font-family: 'Open Sans'
-`
 
 export default Review

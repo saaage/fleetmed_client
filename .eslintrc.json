@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest/globals": true
     },
     "extends": ["eslint:recommended", "plugin:react/recommended"],
     "parser": "babel-eslint",
@@ -17,6 +18,10 @@
             2,
             {"SwitchCase": 1}
         ],
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/valid-expect": "error",
         "linebreak-style": [
             "error",
             "unix"
@@ -32,5 +37,8 @@
         ],
         "strict": 0
     },
+    "plugins": [
+      "jest"
+    ],
     "settings": {"import/resolver": "webpack"}
 }

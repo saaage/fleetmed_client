@@ -1,6 +1,6 @@
 import React from 'react'
-import Review from 'resources/reviews/Review'
 import { mount } from 'enzyme'
+import Review from 'resources/reviews/Review'
 
 describe('<Review />', () => {
   let review
@@ -11,6 +11,7 @@ describe('<Review />', () => {
       feedback: 'hello',
       delete: () => {}
     }
+
     review = mount(
       <Review {...props} />
     )
@@ -21,6 +22,6 @@ describe('<Review />', () => {
   })
 
   it('renders', () => {
-    expect(review).to.be.present()
+    expect(review).toContain('hello')
   })
 })
