@@ -2,7 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { userSignIn } from 'redux/actions/userActions'
-import StaticLot from 'core/styled/StaticLot'
+import StaticLot from 'flexbox/StaticLot'
 import StyledLink from 'core/styled/StyledLink'
 import FormStyler from 'core/styled/FormStyler'
 import Button from 'core/styled/Button'

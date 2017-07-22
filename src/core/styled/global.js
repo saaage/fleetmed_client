@@ -9,7 +9,6 @@ const global = injectGlobal`
 
 ${''/* Any items rendered inside of App will be in centered along X and Y */}
   #root [data-reactroot] {
-    align-items: center;
     height: 100vh;
     display: flex;
     justify-content: center;
