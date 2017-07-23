@@ -10,7 +10,7 @@ const Navbar = props => {
     return (
       <nav className={props.className}>
         <NavList>
-          <li><StyledNavLink to="/profile">Profile Page</StyledNavLink></li>
+          <li><StyledNavLink to="/dashboard">Dashboard</StyledNavLink></li>
           <li><StyledNavLink exact to="/home">FleetMED</StyledNavLink></li>
           <li><StyledNavLink to="/signout">Sign Out</StyledNavLink></li>
         </NavList>

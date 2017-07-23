@@ -24,7 +24,7 @@ class New extends React.Component {
   }
 
   successCallBack() {
-    this.props.history.push('/profile')
+    this.props.history.push('/dashboard')
   }
 
   render() {

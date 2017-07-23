@@ -6,6 +6,11 @@ const NavList = styled.ul`
   overflow: hidden;
   padding: 0;
 
+  li:first-child {
+    float: left;
+    margin-left: 71px;
+  }
+
   /* Change the link color to #111 (black) on hover */
   li a:hover {
       background-color: #2c3e50;
@@ -25,7 +30,7 @@ const NavList = styled.ul`
 
   li:last-child {
     float: right;
-    margin-right: 22px;
+    margin-right: 71px;
   }
 
   text-align: center;

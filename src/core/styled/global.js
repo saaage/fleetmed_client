@@ -2,9 +2,14 @@ import { injectGlobal } from 'styled-components'
 
 const global = injectGlobal`
 
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     margin: 0px;
-    margin-top: 1px;
+    background-color: #34495E;
+    font-size: 1.4rem;
   }
 
   #root [data-reactroot] {
