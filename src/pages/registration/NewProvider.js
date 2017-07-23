@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Button from 'core/styled/Button'
 import FormStyler from 'core/styled/FormStyler'
 import Span from 'core/styled/Span'
-import StaticLot from 'flexbox/StaticLot'
+import Centered from 'flexbox/CenteredContainer'
 import StyledLink from 'core/styled/StyledLink'
 import { submitRegistration } from 'redux/actions/registrationActions'
 import { checkAPISession } from 'redux/actions/userActions'
@@ -31,7 +31,7 @@ class NewProvider extends React.Component {
 
   render() {
     return (
-      <StaticLot>
+      <Centered>
         <FormStyler>
           <form>
             <input ref={(node) => { this.email = node }} type="text" placeholder="Email" />
@@ -42,7 +42,7 @@ class NewProvider extends React.Component {
         </FormStyler>
         <Span>Already a user?</Span>
         <StyledLink to="/signin">Log In</StyledLink>
-      </StaticLot>
+      </Centered>
     )
   }
 }

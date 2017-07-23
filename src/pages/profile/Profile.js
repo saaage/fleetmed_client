@@ -1,5 +1,5 @@
 import React from 'react'
 
-const Profile = () => <h1>Welcome to your profile page</h1>
+const Profile = () => null
 
 export default Profile

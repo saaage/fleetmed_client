@@ -3,17 +3,19 @@ import { Route, Redirect, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Comps from 'index'
+import Centered from 'flexbox/CenteredContainer'
+import FlexColumn from 'flexbox/FlexColumn'
 
 const Routes = (props) => {
   if (props.signedIn) {
     return (
       <div>
         <Switch>
-          <Route path="/reviews" component={Comps.Reviews} />
-          <Route path="/profile" component={Comps.Profile} />
-          <Route path="/signout" component={Comps.Sessions.Destroy} />
-          <Route path="/confirm" component={Comps.Registration.ConfirmEmail} />
-          <Redirect exact from="/signup" to="/profile" />
+            <Route path="/reviews" component={Comps.Reviews} />
+            <Route path="/profile" component={Comps.Profile} />
+            <Route path="/signout" component={Comps.Sessions.Destroy} />
+            <Route path="/confirm" component={Comps.Registration.ConfirmEmail} />
+            <Redirect exact from="/signup" to="/profile" />
         </Switch>
       </div>
     )
@@ -21,9 +23,9 @@ const Routes = (props) => {
     // If not signed in provide signIn route and redirect
     return (
       <Switch>
-        <Route path="/signin" component={Comps.Sessions.New} />
-        <Route path="/signup" component={Comps.Registration.NewProvider} />
-        <Redirect from="/" to="/signin" />
+          <Route path="/signin" component={Comps.Sessions.New} />
+          <Route path="/signup" component={Comps.Registration.NewProvider} />
+          <Redirect from="/" to="/signin" />
       </Switch>
     )
   } else {
@@ -31,12 +33,4 @@ const Routes = (props) => {
   }
 }
 
-const styledRoutes = styled(Routes)`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  width: 100%;
-`
-
-export default styledRoutes
+export default Routes

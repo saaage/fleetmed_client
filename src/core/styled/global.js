@@ -9,8 +9,7 @@ const global = injectGlobal`
 
   #root [data-reactroot] {
     height: 100vh;
-    display: flex;
-    justify-content: center;
+    position: relative;
   }
 `
 
