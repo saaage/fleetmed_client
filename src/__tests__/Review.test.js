@@ -8,7 +8,7 @@ describe('<Review />', () => {
   beforeEach(() => {
     const props = {
       id: 1,
-      feedback: 'hello',
+      feedback: 'Food was good',
       delete: () => {}
     }
 
@@ -22,6 +22,6 @@ describe('<Review />', () => {
   })
 
   it('renders', () => {
-    expect(review).toContain('hello')
+    expect(review.text()).toMatchSnapshot()
   })
 })

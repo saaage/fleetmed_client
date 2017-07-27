@@ -34,7 +34,7 @@ const NavList = styled.ul`
   }
 
   text-align: center;
-  width: 100%;
+  width: 75%;
 `
 
 export default NavList
