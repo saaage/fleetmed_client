@@ -1,5 +1,4 @@
 // Destroy does not render a view, just destroys session and redirects to '/'
-
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
