@@ -3,14 +3,12 @@ import styled from 'styled-components'
 
 const StyledNavLink = styled(NavLink).attrs({
   activeStyle: {
-    color: '#ecf0f1',
-    fontSize: '1.5rem'
+    color: '#4E5884'
   }
 })`
-  color: #7f8c8d;
+  color: #4E5884;
   font-weight: 500;
   font-family: 'Open Sans';
-  font-size: '2.5rem';
 `
 
 export default StyledNavLink

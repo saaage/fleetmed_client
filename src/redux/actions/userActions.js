@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const sessionsPath = 'http://localhost:3000/v1/sessions'
+const sessionsPath = 'http://10.0.58.7:3000/v1/sessions'
 
 export function userSignIn(emailAddress, password, successCallBack) {
   return (dispatch) => {

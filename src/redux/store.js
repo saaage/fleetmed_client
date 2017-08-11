@@ -4,7 +4,8 @@ import { logger } from 'redux-logger'
 // logs changes to state in the console
 import promise from 'redux-promise-middleware'
 // allows us to dispatch a promise as the value of payload in our actions
-// a 'pending' aciton is dispatched immediately with the original type string and a suffix of _PENDING
+// a 'pending' action is dispatched immediately with the original type string
+// and a suffix of _PENDING
 import thunk from 'redux-thunk'
 // allows us to write action creators that return a function instead of an action
 import reducer from './reducers'

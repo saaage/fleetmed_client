@@ -2,8 +2,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { userSignIn } from 'redux/actions/userActions'
-import Centered from 'flexbox/CenteredContainer'
-import StyledLink from 'core/styled/StyledLink'
+import WelcomeGrid from 'grid/WelcomeGrid'
 import FormStyler from 'core/styled/FormStyler'
 import Button from 'core/styled/Button'
 
@@ -29,16 +28,15 @@ class New extends React.Component {
 
   render() {
     return (
-      <Centered>
+      <WelcomeGrid>
         <FormStyler>
           <form>
             <input ref={(node) => { this.email = node }} type="email" placeholder="Email" />
             <input ref={(node) => { this.password = node }} type="password" placeholder="Password" />
-            <Button primary onClick={this.signIn}>Sign In</Button>
+            <Button primary onClick={this.signIn}>Login</Button>
           </form>
         </FormStyler>
-        <StyledLink to="/signup">Sign Up For FleetMED</StyledLink>
-      </Centered>
+      </WelcomeGrid>
     )
   }
 }

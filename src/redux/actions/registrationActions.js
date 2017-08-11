@@ -1,7 +1,7 @@
 import axios from 'axios'
 import queryString from 'query-string'
 
-const registrationPath = 'http://localhost:3000/v1/users'
+const registrationPath = 'http://10.0.58.7:3000/v1/users'
 
 export function submitRegistration(emailAddress, password, passwordConfirmation, successCallBack) {
   return (dispatch) => {

@@ -3,25 +3,39 @@ import styled from 'styled-components'
 
 const FormStyler = styled.div`
 
-  border: 1px solid;
-  border-radius: 3px;
+  border-radius: 5px;
   display: flex;
-  height: 20em;
+  grid-column-start: 2;
+  grid-row: 2;
   justify-content: center;
-  width: 30em;
 
   form {
+    align-self: center;
+    background-color: #FAFAFF;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 65%;
+    height: 70%;
+    width: 100%;
+    padding: none;
   }
 
   input {
-    display: block;
-    font-size: 100%;
+    display: inline-block;
+    font-size: 16px;
+    height: 44px;
+    width: 342px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: .5em;
-    width: 100%;
+    outline: 0 none;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: none;
   }
 `
 export default FormStyler

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const reviewsPath = 'http://localhost:3000/v1/reviews/'
+const reviewsPath = 'http://10.0.58.7:3000/v1/reviews/'
 
 export function fetchReviews() {
   return (dispatch) => {
