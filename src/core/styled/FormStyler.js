@@ -5,8 +5,7 @@ const FormStyler = styled.div`
 
   border-radius: 5px;
   display: flex;
-  grid-column-start: 2;
-  grid-row: 2;
+  grid-area: form;
   justify-content: center;
 
   form {
@@ -16,16 +15,23 @@ const FormStyler = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 1em;
     height: 70%;
     width: 100%;
-    padding: none;
+    padding: 20px 10px;
+    a {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 145px;
+    }
   }
 
   input {
     display: inline-block;
     font-size: 16px;
     height: 44px;
-    width: 342px;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: .5em;

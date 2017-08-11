@@ -3,6 +3,7 @@
 import React from 'react'
 import StyledNavLink from 'core/navbar/styled/StyledNavLink'
 import NavList from 'core/navbar/styled/NavList'
+import { Logo } from 'core/styled/Logo'
 
 const Navbar = props => {
 
@@ -11,7 +12,7 @@ const Navbar = props => {
       <nav className={props.className}>
         <NavList>
           <li><StyledNavLink to="/dashboard">Dashboard</StyledNavLink></li>
-          <li><StyledNavLink exact to="/home">FleetMED</StyledNavLink></li>
+          <li><StyledNavLink exact to="/home"><Logo /></StyledNavLink></li>
           <li><StyledNavLink to="/signout">Account</StyledNavLink></li>
         </NavList>
       </nav>
